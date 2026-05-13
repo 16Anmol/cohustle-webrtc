@@ -1,0 +1,4 @@
+[deploy]
+startCommand = "python webrtc_server.py"
+healthcheckPath = "/"
+restartPolicyType = "on_failure"
