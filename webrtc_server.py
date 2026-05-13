@@ -256,7 +256,7 @@ async def ws_handler(request):
 async def main():
     app = web.Application()
     app.router.add_get("/", health)              # Render health check GET
-    app.router.add_route("HEAD", "/", health)    # Render health check HEAD
+  
     app.router.add_get("/ws", ws_handler)        # WebSocket signaling endpoint
 
     runner = web.AppRunner(app)
@@ -268,4 +268,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main()) 
